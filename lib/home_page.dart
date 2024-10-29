@@ -22,12 +22,19 @@ class HomePage extends StatelessWidget {
           ),
         ) ,
 
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.transparent,
         leading: Image.asset(appbar),
         actions: [
           Icon(Icons.search,
-          size: 40,),
-          Image.asset(she),
+          size: 40),
+          Container(
+            height: 40,
+            width: 30,
+            decoration: BoxDecoration(image: DecorationImage(image: AssetImage(she),
+                fit: BoxFit.cover)
+            ),
+          )
+
         ],
       ),
       body: SingleChildScrollView(scrollDirection: Axis.vertical,
@@ -160,7 +167,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SmallText(title: 'Home'),
-              SmallText(title: 'Comming soon'),
+              SmallText(title: 'Coming Soon'),
               SmallText(title: 'Download'),
             ],
           ),),
